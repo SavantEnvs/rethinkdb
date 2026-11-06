@@ -1,0 +1,9 @@
+project: savantenvs/rethinkdb
+target: fuzz_reql_query
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_reql_query/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_reql_query
+    libfuzzer: true
+    timeout: 30
